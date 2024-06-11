@@ -26,9 +26,7 @@ export async function POST(req: NextRequest) {
       email, username, password: hashedPassword
     })
 
-    const savedUser = newUser.save();
-
-    console.log("file: route.ts:31 ~ savedUser:", savedUser)
+    const savedUser = await newUser.save();
 
     // await sendEmail() //send mail here
 
